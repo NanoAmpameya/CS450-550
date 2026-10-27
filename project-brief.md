@@ -115,3 +115,41 @@ Status:
 - Uniform location -1 = not found (silently ignored, no crash)
 - Rasterizer interpolates per-vertex values (e.g. color) across a triangle
 - Animation: glfwGetTime() → float t → sin/cos offsets → glm::translate on the model matrix
+- 3D: pMat = glm::perspective, vMat = camera translate, mMat = model, mv = v * m
+- One VAO per object; two VBOs per object (positions + colors)
+- Animation for HW3 is on the CPU with GLM, then uploaded as mv_matrix
+
+## Homework 3 — 3D Scene ✅ (code done locally)
+Modules: 3D pipeline, GLM transforms, multiple objects
+Folder: ~/CS450/homework3
+Files to turn in: homework3.cpp, shader.vert, shader.frag, plus a PDF with the Kaltura/OSU video link
+obj_converter.py is in the folder if you later swap in a free .obj (triangles only, cite the source)
+
+What it draws:
+- Two unique objects, original vertex/color data (not shared):
+  cube (36 verts, per-face colors) + square pyramid (18 verts, per-face colors)
+- 2 VAOs, 4 VBOs (each object: position VBO + color VBO)
+- GLM: perspective, translate, scale, rotate, value_ptr
+- Each object transformed at least twice (move off origin + scale)
+- Two different animations on the application side:
+  cube spins around Y; pyramid bobs with sin() and spins around Z
+
+Build / run (no IDE) — show this at the START of the video:
+  cd ~/CS450/homework3
+  make clean
+  make
+  make run
+Window title: "Homework 3 - 3D Scene". Close the window to quit.
+
+Video still on you:
+- Record with Kaltura (auto captions + media.oregonstate.edu host)
+- Voice it yourself, < 5 min, build+run FIRST
+- Chat should give a short spoken script in the reply
+- Then PDF with the link + the 3 source files
+
+Status:
+- [x] Two unique objects, separate VAO/VBOs
+- [x] Each transformed twice (translate + scale)
+- [x] Two different app-side GLM animations
+- [x] Explanations ready — see video script
+- [ ] Record, upload, submit (human; agent cannot record)

@@ -8,6 +8,7 @@ C++, OpenGL 4.1 core (macOS), GLFW, GLEW, GLM, SOIL2. Libraries live in `~/GL/Op
 
 - `Test Project/` — Homework 1: tool setup check
 - `homework2/` — Homework 2: two original triangles, VBO/VAO, position color, shader animation
+- `homework3/` — Homework 3: two 3D objects (cube + pyramid), GLM transforms, app-side animation
 - `project-brief.md` — course log, setup notes, and homework status
 
 ## Build (no IDE)
@@ -24,6 +25,13 @@ Homework 2:
 
 ```bash
 cd homework2
+make run
+```
+
+Homework 3:
+
+```bash
+cd homework3
 make run
 ```
 
